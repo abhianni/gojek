@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite preserve-order="true" name="MainSuite" parallel="false"
+	verbose="2" thread-count="2" >
+
+	<listeners>
+		<listener class-name="com.gojek.GojekHelper.ExtentReporterNG">
+			
+		</listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="com.gojek.GojekHelper.Screenshot" />		
+	</listeners>
+	<test name="Flight Booking">
+	
+		<classes>
+			
+		</classes>
+	</test>
+	
+	
+	 <!-- Test -->
+</suite> <!-- Suite -->
