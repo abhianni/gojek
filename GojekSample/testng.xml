@@ -13,7 +13,12 @@
 	<test name="Flight Booking">
 	
 		<classes>
-			
+			<class name="RoundTripFlightBookingTest">
+			<methods>
+			<include name="roundtripbookingtestPass"></include>
+			<include name="roundtripbookingtestFail"></include>
+			</methods>
+			</class>
 		</classes>
 	</test>
 	
