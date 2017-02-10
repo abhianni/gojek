@@ -70,7 +70,7 @@ public class Browser {
 		OutputPath = home + prop.getProperty("OutputPath");
 		reader = new ExcelReader();
 		reader.testDataFile(File);
-		str=reader.readFromColumn("Base", 1, 6);
+		str=reader.readFromColumn("Base", 1, 8);
 		try {
 			
 			if (str.equalsIgnoreCase("firefox")) {
