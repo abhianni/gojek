@@ -1,6 +1,8 @@
 package com.gojek.GojekHelper;
 
 import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -18,7 +20,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class ExtentReporterNG implements IReporter {
 	private ExtentReports extent;
-
+	String destFile;
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator + "Extent.html", true);
 
@@ -39,8 +41,7 @@ public class ExtentReporterNG implements IReporter {
 	}
 
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
-		ExtentTest test;
-
+		ExtentTest test;	
 		if (tests.size() > 0) {
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
@@ -56,7 +57,7 @@ public class ExtentReporterNG implements IReporter {
 				}
 
 				if ((result.FAILURE > 0)) {
-					test.addScreenCapture(Browser.screenshotPath + ".png");
+					test.addScreenCapture(Browser.screenshotPath + "/" + Screenshot.destFile);
 				}
 
 				if (result.getThrowable() != null) {

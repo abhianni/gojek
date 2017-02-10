@@ -21,7 +21,6 @@
       <class name="com.gojek.GojekTest.RoundTripFlightBookingTest">
         <methods>
           <include name="roundtripbookingtestFail" invocation-numbers="0"/>
-          <include name="roundtripbookingtestPass" invocation-numbers="0"/>
           <include name="browserSetup"/>
           <include name="driverClose"/>
           <include name="sendMail"/>

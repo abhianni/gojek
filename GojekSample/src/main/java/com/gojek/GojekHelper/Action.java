@@ -115,7 +115,12 @@ public class Action  extends Browser{
 													// drop down
 	{
 		try {
-			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Select drop = new Select(element(locator));
 			drop.selectByVisibleText(text);
 		} catch (NoSuchElementException e) {
@@ -129,6 +134,12 @@ public class Action  extends Browser{
 	 * @param int
 	 */
 	public void dropdown(By locator, int i) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		waitForElementVisible(locator);
 		Select drop = new Select(element(locator));
 		drop.selectByIndex(i);
@@ -170,7 +181,7 @@ public class Action  extends Browser{
 													// clickable
 	{
 		try {
-			WebDriverWait wait = new WebDriverWait(config.get(str), 10);
+			WebDriverWait wait = new WebDriverWait(config.get(str), 40);
 			wait.until(ExpectedConditions.elementToBeClickable(locator));
 		} catch (TimeoutException e) {
 			throw new TimeoutException("Error message:  " + e.getMessage());

@@ -28,14 +28,17 @@ public class RoundTripFlightBooking extends Action{
 		click(locator("returnDate"));
 		int todate = day.getDate()+10;
 		click(By.xpath("(//a[text()='"+todate+"'])[1]"));
-		dropdown(locator("adultDropdown"), 1);
-		dropdown(locator("childrenDropdown"), 1);
+		dropdown(locator("adultDropdown"), "1");
+		dropdown(locator("childrenDropdown"), "0");
 		click(locator("SearchButton"));
 		click(locator("BookButton"));
 		click(locator("insuranceCheckbox"));
 		click(locator("continueButton"));
+		if(elements(locator("username")).size()>0)
+		{
 		type(locator("username"), emailid);
 		click(locator("loginButton"));
+		}
 		dropdown(locator("travellerTitle"), 1);
 		type(locator("travellerName"), firstname);
 		type(locator("travellerLastName"), lastname);

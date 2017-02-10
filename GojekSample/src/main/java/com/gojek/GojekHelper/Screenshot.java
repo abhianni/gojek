@@ -16,7 +16,7 @@ import org.testng.TestListenerAdapter;
 public class Screenshot extends TestListenerAdapter {
 
 	String destDir;
-	String destFile;
+	static String destFile;
 	File scrFile;
 	private static final String ESCAPE_PROPERTY = "org.uncommons.reportng.escape-output";
 
@@ -36,7 +36,7 @@ public class Screenshot extends TestListenerAdapter {
 			}
 
 			try {
-				DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy__hh_mm_ssaa");
+				DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy__hh_mm_aa");
 				destDir = Browser.screenshotPath;
 				new File(destDir).mkdirs();
 				destFile = dateFormat.format(new java.util.Date()) + ".png";
