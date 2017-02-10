@@ -152,8 +152,8 @@ public class Browser {
 	@AfterSuite
 	public void sendMail() throws IOException {
 		reader.testDataFile(File);
-		final String mailto = reader.readFromColumn("Base", 1, 3);
-		final String psswrd = reader.readFromColumn("Base", 1, 4);
+		final String mailto = reader.readFromColumn("Base", 1, 6);
+		final String psswrd = reader.readFromColumn("Base", 1, 7);
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");

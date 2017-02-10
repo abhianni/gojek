@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
+    <classes>
+      <class name="com.gojek.GojekHelper.ExcelReader"/>
+      <class name="com.gojek.GojekTest.RoundTripFlightBookingTest"/>
+      <class name="com.gojek.GojekHelper.ExtentReporterNG"/>
+      <class name="com.gojek.GojekHelper.Screenshot"/>
+      <class name="com.gojek.GojekHelper.Action"/>
+      <class name="com.gojek.GojekLogic.RoundTripFlightBooking"/>
+      <class name="com.gojek.GojekHelper.Browser"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.gojek.GojekTest.RoundTripFlightBookingTest">
+        <methods>
+          <include name="roundtripbookingtestFail"/>
+          <include name="roundtripbookingtestPass"/>
+          <include name="browserSetup"/>
+          <include name="driverClose"/>
+          <include name="sendMail"/>
+        </methods>
+      </class> <!-- com.gojek.GojekTest.RoundTripFlightBookingTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
