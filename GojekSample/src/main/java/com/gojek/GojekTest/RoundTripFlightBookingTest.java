@@ -24,7 +24,7 @@ public class RoundTripFlightBookingTest extends RoundTripFlightBooking {
  	public Object[][] dataProvideremail() throws IOException {
 
  		read.testDataFile(File);
- 		Object[][] data = new Object[][] {{  read.readFromColumn("Base", 1, 5)} };
+ 		Object[][] data = new Object[][] {{  read.readFromColumn("Base", 1, 0),read.readFromColumn("Base", 1, 1),read.readFromColumn("Base", 1, 2),read.readFromColumn("Base", 1, 4),read.readFromColumn("Base", 1, 5),read.readFromColumn("Base", 1, 3)} };
  		read.closeFile();
  		return data;
  	}
