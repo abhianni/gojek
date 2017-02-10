@@ -13,7 +13,7 @@
 	<test name="Flight Booking">
 	
 		<classes>
-			<class name="RoundTripFlightBookingTest">
+			<class name="com.gojek.GojekTest.RoundTripFlightBookingTest">
 			<methods>
 			<include name="roundtripbookingtestPass"></include>
 			<include name="roundtripbookingtestFail"></include>
